@@ -1,0 +1,9 @@
+<header class="header">
+  <h1>Catálogo de Produtos</h1>
+  <button class="cart-button" routerLink="/carrito">🛒 Carrito</button>
+</header>
+<section class="grid">
+  <div *ngFor="let p of products | async; trackBy: trackById">
+    <product-card [product]="p"></product-card>
+  </div>
+</section>
